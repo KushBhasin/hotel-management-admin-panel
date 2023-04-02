@@ -1,0 +1,150 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: #141627;
+}
+
+h1{
+  font-size: 1em;
+  margin: 20px;
+  color: white;
+}
+
+.shade{
+  display: block;
+  height: 200px;
+  width: 200px;
+  background-image: linear-gradient(blue, red);
+  filter: blur(50px);
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: 10%;
+}
+
+.App{
+  height: fit-content;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+}
+
+.main_container{
+  width: 90vw;
+  height: fit-content;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #141627;
+}
+
+.main_container #heading{
+  display: flex;
+  font-size: 3em;
+  color: rgb(252, 252, 252);
+  align-items: center;
+  margin: 20px;
+}
+
+.main_container #welcome{
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+  padding: 10px;
+}
+
+.sideBar{
+  height: 100vh;
+  width: 20vw;
+  background-color: #141627;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.sideBar span{
+  width: 90%;
+  border-radius: 20px;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.389);
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  color: white;
+}
+
+.sideBar span:nth-of-type(1){
+  border: 1px solid whitesmoke;
+}
+
+.sideBar span i{
+  width: 10px;
+}
+
+
+.sideBar a {
+  width: 60%;
+  text-decoration: none;
+  margin: 20px;
+  color: white;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+#oc {
+  color:rgb(3, 3, 3);
+  margin: 10px;
+  text-align: center;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content_container{
+  width: 70vw;
+}
+
+#oc{
+  display : none;
+}
+
+@media screen and (max-width: 700px) {
+  .App{
+    flex-direction: column;
+  }
+  #oc{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    /* position: fixed; */
+    right: 10%;
+    top: 5%;
+    z-index: 1000;
+    border-radius: 50%;
+    margin-left: 40px;
+  }
+
+  .sideBar{
+    width: 100vw;
+    height: fit-content;
+    min-height: 100vh;
+    position: fixed;
+    left: -100vw;
+    transition-duration: 0.4s;
+  }
+  .main_container #heading{
+    display: flex;
+    font-size: 1.5em;
+    color: rgb(252, 252, 252);
+    align-items: center;
+    margin: 20px;
+  }
+}

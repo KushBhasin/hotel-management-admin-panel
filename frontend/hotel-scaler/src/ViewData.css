@@ -1,0 +1,237 @@
+.content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.content form{
+    width: 15%;
+}
+
+.content form div{
+    max-height: fit-content;
+    height: 0;
+    overflow: hidden;
+    cursor: pointer;
+    transition-duration: 1s;
+}
+
+.content h4{
+    padding: 10px;
+    background-color: #1c1f37;
+    border-radius: 10px;
+    color: white;
+}
+
+.content h3{
+    padding: 10px;
+    background-color: #1e3e71;
+    border-radius: 10px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.content h3:hover{
+    cursor: pointer;
+}
+
+.content h3 i{
+    padding: 0 10px;
+}
+
+.content form .filter_item{
+    width: 100%;
+    display: flex;
+    background-color: #1c1f37;
+    margin: 3px;
+    border-radius: 10px;
+    align-items: center;
+    color: white;
+    margin: 5px 0;
+}
+
+.content form .filter_item input{
+    appearance: none;
+    background-color: #bfbebe;
+    display: block;
+    padding: 10px;
+    margin: 10px;
+}
+
+
+.content form .filter_item input:checked{
+    background-color: rgb(38, 213, 167);
+}
+
+.content table{
+    display: block;
+    width: 80%;
+}
+
+.content table tr{
+    height: 10px;
+}
+
+.content table td, th{
+    width: 20%;
+    width: fit-content;
+    height: fit-content;
+    background-color: #1c1f37;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+}
+
+.content table tr .buttons{
+    text-align: center;
+}
+
+.content table tr .delete{
+    color: red;
+}
+
+
+#editItem{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: 100;
+    background-color: #141627c6;
+    backdrop-filter: blur(10px);
+    top: -130vh;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    transition-duration: 1s;
+}
+
+#editItem h5{
+    color: white;
+    font-size: 2.5em;
+    margin-left: 110px;
+}
+
+
+#editItem input{
+    appearance: none;
+}
+
+#editItem form{
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+}
+
+
+#editItem form span{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+#editItem form span label{
+    color: white;
+    margin: 10px 10px;
+}
+
+#editItem form span select{
+    appearance: none;
+    border: none;
+    background-color: #1c1f37;
+    padding: 10px;
+    font-size: 1em;
+    color: white;
+    border-bottom: 10px;
+    margin: 10px;
+}
+
+#editItem form span input{
+    appearance: none;
+    border: none;
+    background-color: #1c1f37;
+    padding: 10px;
+    font-size: 1em;
+    color: white;
+    border-bottom: 10px;
+    margin: 10px;
+}
+
+#editItem form div{
+    display: flex;
+}
+
+input[type="submit"] {
+    appearance: none;
+    border: none;
+    background-color: #1c1f37;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    border-bottom: 10px;
+    margin: 10px;
+    width: fit-content;
+}
+
+.fa-xmark{
+    color: white;
+    font-size: 2em;
+    position: absolute;
+    top: 10%;
+    right: 10%;
+}
+
+.loading{
+    height: 50px;
+    width: 50px;
+    display: block;
+    border-top: 5px solid rgb(188, 182, 182);
+    border-bottom: 5px solid rgb(108, 194, 215);
+    border-left: 5px solid rgb(182, 219, 141);
+    border-right: 5px solid rgb(220, 156, 214);
+    animation-name: rotate;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rotate {
+    from{
+        transform: rotateZ(0);
+        border-radius: 50%;
+    }
+    to{
+        transform: rotateZ(360deg);
+        border-radius: 0%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .content{
+        width: fit-content;
+    }
+    .content form{
+        width: 100%;
+    }
+
+    #editItem{
+        height: fit-content;
+    }
+    #editItem h5{
+        color: white;
+        font-size: 2.5em;
+        margin-left: 0;
+    }
+
+    #editItem form{
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    #editItem form div{
+        flex-direction: column;
+    }
+  }
+  
